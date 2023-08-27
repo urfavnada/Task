@@ -1,0 +1,27 @@
+# Problem 1
+import math
+n, m = map(int, input().split())
+# checking is the num is prime or not
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# the next num
+next_prime_n = n + 1
+while not is_prime(next_prime_n):
+    next_prime_n += 1
+
+# Checking and print
+if m == next_prime_n:
+    print("YES")
+else:
+    print("NO")
+###################################################
+
+# Problem 2 
+x = int(input())
+print(5**x)
